@@ -8,4 +8,6 @@ Write a dart class for tech learners and mentors. Should have following methods
     3. setAvailableTime() : if person is mentor set available time
     4. getMentor() : Takes stack and time as params and finds available mentors. 
 
-### Screenshots
+### Screenshot
+
+<img src="https://github.com/AbhayVAshokan/TinkerHub-Learn-From-Home/blob/master/.images/screening.png" width=750>
