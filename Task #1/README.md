@@ -5,4 +5,4 @@ Change the Icon widget of the add button and replace it with a Text widget conta
 Include an extra button in the app which when clicked will decrease the value of the variable by one.
 
 ## Screenshot
-<img src="https://github.com/AbhayVAshokan/TinkerHub-Learn-From-Home/blob/master/.images/task1.jpg" height="500"/>
+<img src="https://github.com/AbhayVAshokan/TinkerHub-Learn-From-Home/blob/master/.images/task1.jpg" width="300"/>
