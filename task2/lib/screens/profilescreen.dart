@@ -99,40 +99,227 @@ class ProfileScreen extends StatelessWidget {
         height: 180,
         child: Card(
           elevation: 10.0,
-          child: Row(
-            children: <Widget>[
-              IconButton(
-                  icon: Transform(
-                      child: Icon(Icons.reply),
-                      transform: Matrix4.rotationY(pi)),
-                  onPressed: null),
-              Column(
-                children: <Widget>[
-                  RichText(
-                    text: TextSpan(text: 'Replied in ', children: [
-                      TextSpan(text: 'Spirit of Alaska'),
-                    ]),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 30.0,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                IconButton(
+                    icon: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Transform(
+                          child: Icon(
+                            Icons.reply,
+                            color: secondarybgcolor,
+                            size: 30.0,
+                          ),
+                          transform: Matrix4.rotationY(pi)),
+                    ),
+                    onPressed: null),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    right: 10.0,
                   ),
-                  Text(
-                      'Really high quality stuff man. Can you share your equipment? Considering a few upgrades :)'),
-                ],
-              ),
-              Text('2h'),
-            ],
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 15.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text(
+                              'Replied in ',
+                              style: TextStyle(
+                                color: secondarybgcolor,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                            Text(
+                              'Spirit of Alaska',
+                              style: TextStyle(
+                                color: headerColor,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15.0,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: mediaQuery.size.width * 0.50,
+                        child: Text(
+                          'Really high quality stuff man. Can you share your equipment? Considering a few upgrades :)',
+                          style: TextStyle(
+                            color: secondarybgcolor,
+                            letterSpacing: 1,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 15.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                  child: Text(
+                    '2h',
+                    style: TextStyle(
+                      color: secondarybgcolor,
+                      fontSize: 18.0,
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       );
     }
 
     Widget card2() {
-      return Container(
-        padding: isLandscape
-            ? EdgeInsets.symmetric(horizontal: 100.0, vertical: 10.0)
-            : EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-        width: double.infinity,
-        height: 180,
-        child: Card(
-          elevation: 10.0,
+      return Padding(
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: Container(
+                height: 180,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10.0),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: textColor,
+                      blurRadius: 15.0,
+                      offset: Offset(5.0, 5.0),
+                    ),
+                  ],
+                ),
+                child: Card(
+                  elevation: 10.0,
+                  child: Image.asset(
+                    'lib/assets/images/feed_photo5.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: 180,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10.0),
+                  ),
+                ),
+                child: Card(
+                  elevation: 10.0,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0, left: 20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 10.0),
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    'Shared ',
+                                    style: TextStyle(
+                                      color: secondarybgcolor,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Nico\'s ',
+                                    style: TextStyle(
+                                      color: headerColor,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                  Text(
+                                    'album',
+                                    style: TextStyle(
+                                      color: secondarybgcolor,
+                                      letterSpacing: 1,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(Icons.location_on,
+                                    color: textColor, size: 25.0),
+                                Text(
+                                  'Iceland',
+                                  style: TextStyle(
+                                    color: emphasisColor,
+                                    letterSpacing: 1,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 18.0,
+                                  ),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Container(
+                              width: mediaQuery.size.width * 0.37,
+                              child: Text(
+                                'Check out this dude! Amazing...',
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: secondarybgcolor,
+                                  letterSpacing: 1,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15.0,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 30.0, top: 10.0),
+                        child: Text(
+                          '4h',
+                          style: TextStyle(
+                            color: secondarybgcolor,
+                            fontSize: 18.0,
+                            letterSpacing: 1.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       );
     }
