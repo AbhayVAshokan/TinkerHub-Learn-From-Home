@@ -44,7 +44,7 @@ List<Object> feeds = [
     name: 'Sundar Pichai',
     location: 'India',
     shortDescription: 'The best of nature :)',
-    profilePic: 'lib/assets/images/sunder_pichai.jpg',
+    profilePic: 'lib/assets/images/sundar_pichai.jpeg',
   ),
   ImageCardModel(
     imageUrl: 'lib/assets/images/feed_photo5.jpg',
