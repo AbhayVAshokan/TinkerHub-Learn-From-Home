@@ -15,15 +15,21 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         primaryTextTheme: TextTheme(
           headline1: TextStyle(
-            fontSize: 28.0,
+            fontSize: 22.0,
             color: headerColor,
-            letterSpacing: 1.5,
+            letterSpacing: 1,
             fontWeight: FontWeight.w800,
           ),
           headline2: TextStyle(
             fontSize: 19.0,
             color: textColor,
-            letterSpacing: 1.5,
+            letterSpacing: 1.75,
+            fontWeight: FontWeight.w600,
+          ),
+          bodyText1: TextStyle(
+            fontSize: 15.0,
+            color: secondarybgcolor,
+            letterSpacing: 0.75,
             fontWeight: FontWeight.w600,
           ),
         ),

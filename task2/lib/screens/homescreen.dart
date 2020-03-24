@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widgets/constants.dart';
 
 import '../widgets/top_bar.dart';
+import '../widgets/feeds.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     MediaQueryData mediaQuery = MediaQuery.of(context);
 
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: TopBar(),
             ),
+            Feeds(),
           ],
         ),
       ),

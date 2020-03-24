@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/constants.dart';
+import '../screens/profilescreen.dart';
 
 class TopBar extends StatelessWidget {
   @override
@@ -28,10 +29,16 @@ class TopBar extends StatelessWidget {
                       spreadRadius: 0.25,
                     ),
                   ]),
-              child: CircleAvatar(
-                backgroundImage:
-                    AssetImage('lib/assets/images/profile_photo.jpeg'),
-                radius: 25.0,
+              child: GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => ProfileScreen()),
+                ),
+                child: CircleAvatar(
+                  backgroundImage:
+                      AssetImage('lib/assets/images/profile_photo.jpeg'),
+                  radius: 25.0,
+                ),
               ),
             ),
           ],
