@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/top_bar.dart';
-import '../widgets/feeds.dart';
 import '../widgets/constants.dart';
+import 'package:task2/widgets/profilescreen_widgets/top_bar.dart';
+import 'package:task2/widgets/homescreen_widgets/feeds.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -16,9 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
     bool isLandscape = mediaQuery.orientation == Orientation.landscape;
     final List<String> _dropdownListItems = [
       'Overall',
-      'Recent',
-      'Your Location',
-      'This Month'
+      'Latest',
+      'Contests',
+      'Photos'
     ];
     var _selectedValue = 'Overall';
 

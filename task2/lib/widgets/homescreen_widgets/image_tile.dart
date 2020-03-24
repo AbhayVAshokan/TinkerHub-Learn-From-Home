@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/image_card_model.dart';
-import './constants.dart';
+import 'package:task2/models/image_card_model.dart';
+import '../constants.dart';
 
 class ImageTile extends StatelessWidget {
   final ImageCardModel imageCardData;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/constants.dart';
-import '../screens/profilescreen.dart';
+import '../constants.dart';
+import 'package:task2/screens/profilescreen.dart';
 
 class TopBar extends StatelessWidget {
   @override

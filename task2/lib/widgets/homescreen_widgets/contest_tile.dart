@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/contest_card_model.dart';
-import './constants.dart';
+import 'package:task2/models/contest_card_model.dart';
+import '../constants.dart';
 
 class ContestTile extends StatelessWidget {
   final ContestCardModel contestData;
