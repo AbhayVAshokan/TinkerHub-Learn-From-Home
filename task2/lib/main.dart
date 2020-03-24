@@ -29,13 +29,13 @@ class MyApp extends StatelessWidget {
           headline3: TextStyle(
             fontSize: 18,
             color: emphasisColor,
-            letterSpacing: 1,
+            letterSpacing: 0.75,
             fontWeight: FontWeight.w800,
           ),
           bodyText1: TextStyle(
             fontSize: 15.0,
             color: secondarybgcolor,
-            letterSpacing: 0.75,
+            letterSpacing: 0.1,
             fontWeight: FontWeight.w600,
           ),
         ),

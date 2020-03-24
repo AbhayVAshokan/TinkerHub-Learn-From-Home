@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
+    bool isLandscape = mediaQuery.orientation == Orientation.landscape;
     final List<String> _dropdownListItems = [
       'Overall',
       'Recent',
@@ -33,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
               top: 10.0,
               bottom: 20.0,
             ),
-            child: TopBar(),
+            child: isLandscape ? Container() : TopBar(),
           ),
           Align(
             alignment: Alignment.topLeft,

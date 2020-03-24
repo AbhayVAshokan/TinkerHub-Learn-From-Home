@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class ContestCardModel {
   final String contestName;
   final String longDescription;
@@ -11,7 +13,7 @@ class ContestCardModel {
     this.longDescription,
     this.prize,
     this.time,
-    this.competitor1,
-    this.competitor2,
+    @required this.competitor1,
+    @required this.competitor2,
   });
 }

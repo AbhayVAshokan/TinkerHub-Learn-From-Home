@@ -20,6 +20,7 @@ List<Object> feeds = [
   ContestCardModel(
     time: '1h',
     competitor1: 'lib/assets/images/bill_gates.jpg',
+    competitor2: 'lib/assets/images/bill_gates.jpg',
     prize: '100k',
     contestName: 'Apple Pie',
     longDescription:
