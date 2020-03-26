@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../models/user_model.dart';
-import '../widgets/composer.dart';
-import '../widgets/chat_messages.dart';
 import '../models/message_model.dart';
 
 class ChatScreen extends StatefulWidget {
