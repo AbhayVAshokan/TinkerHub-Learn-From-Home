@@ -80,6 +80,7 @@ List<Message> chats = [
     unread: true,
     isLiked: true,
   ),
+
   Message(
     sender: anna,
     text:
@@ -92,7 +93,7 @@ List<Message> chats = [
       sender: harsha,
       text: 'Life is like a box of chocolates.',
       time: '6:00 AM',
-    isLiked: false,
+      isLiked: false,
       unread: false),
   Message(
     sender: calvin,
@@ -155,11 +156,18 @@ List<Message> messages = [
     isLiked: true,
     unread: true,
   ),
+    Message(
+    sender: currentUser,
+    text: 'I\m batman!',
+    time: '5:20 PM',
+    unread: true,
+    isLiked: true,
+  ),
   Message(
       sender: harsha,
       text: 'Life is like a box of chocolates.',
       time: '6:00 AM',
-    unread: false,
+      unread: false,
       isLiked: false),
   Message(
     sender: calvin,
@@ -195,6 +203,13 @@ List<Message> messages = [
     text: 'static',
     time: '2:15 AM',
     unread: false,
+    isLiked: false,
+  ),
+  Message(
+    sender: currentUser,
+    text: 'Ayin?',
+    time: '5:21 PM',
+    unread: true,
     isLiked: false,
   ),
   Message(
