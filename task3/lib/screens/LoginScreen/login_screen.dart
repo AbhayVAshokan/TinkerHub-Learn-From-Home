@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     bool isLandscape = mediaQuery.orientation == Orientation.landscape,
         _checkboxValue = false,
-        isSmallscreen = mediaQuery.size.width <= 800;
+        isSmallscreen = mediaQuery.size.width <= 1000;
     TextEditingController _usernameController = TextEditingController();
     TextEditingController _passwordController = TextEditingController();
 
@@ -66,17 +66,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: <Widget>[
                       Padding(
                         padding: EdgeInsets.only(
-                          top: isLandscape && isSmallscreen ? 5.0 : mediaQuery.size.height * 0.05,
+                          top: isLandscape && isSmallscreen
+                              ? 5.0
+                              : mediaQuery.size.height * 0.05,
                           bottom: mediaQuery.size.height * 0.05,
                           left: 30.0,
                           right: 30.0,
                         ),
-                        child: Text(
-                          'Sign In',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 35.0,
+                        child: Container(
+                          height: 50.0,
+                          alignment: Alignment.topLeft,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('lib/assets/images/logo.png'),
+                                fit: BoxFit.contain),
                           ),
                         ),
                       ),
