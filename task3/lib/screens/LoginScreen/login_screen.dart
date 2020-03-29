@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 height: isLandscape && isSmallscreen
                     ? mediaQuery.size.height * 0.9
-                    : mediaQuery.size.height * 0.60,
+                    : mediaQuery.size.height * 0.6,
                 width: isLandscape
                     ? mediaQuery.size.width * 0.50
                     : mediaQuery.size.width * 0.80,
