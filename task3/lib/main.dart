@@ -1,25 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import './screens/LoginScreen/login_screen.dart';
+import './screens/splashscreen.dart';
+import './screens/login.dart';
+import './screens/homescreen.dart';
+import './screens/search_results.dart';
+import './screens/cart.dart';
+import './screens/favorites.dart';
+import './screens/profile.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
 
-SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Color(0xFF166C28), 
-  ));
-runApp(MyApp());
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp,
+  ]);
+
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.black,
+    ),
+  );
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'BackFlip',
       debugShowCheckedModeBanner: false,
-      title: 'Backflip Cart',
-      theme: ThemeData.light().copyWith(primaryColor: Colors.lightGreen,
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+          size: 30.0,
+        ),
       ),
-      home: LoginScreen(),
+      initialRoute: '/splashscreen',
+      routes: {
+        '/splashscreen': (ocntext) => SplashScreen(),
+        '/login': (context) => Login(),
+        '/homescreen': (context) => HomeScreen(),
+        '/searchresults': (context) => SearchResults(),
+        '/profile': (context) => Profile(),
+        '/favorites': (context) => Favorites(),
+        '/cart': (context) => Cart(),
+      },
     );
   }
 }
