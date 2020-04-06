@@ -9,6 +9,15 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  void _validateCredentials(username, password) {
+    if(username == 'admin' && password == 'admin') {
+      Navigator.pushNamed(context, '/adminscreen');
+    }
+    else {
+      Navigator.pushNamed(context, '/homescreen');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
@@ -58,7 +67,7 @@ class _LoginState extends State<Login> {
                     InputTextField(
                       icon: Icons.vpn_key,
                       text: 'password',
-                      keyboardType: TextInputType.datetime,
+                      keyboardType: TextInputType.text,
                       obscureText: true,
                       mediaQuery: mediaQuery,
                       controller: _passwordController,
@@ -80,7 +89,7 @@ class _LoginState extends State<Login> {
                         ),
                         color: Colors.amber,
                         onPressed: () =>
-                            Navigator.pushNamed(context, '/homescreen'),
+                            _validateCredentials(_usernameController.text, _passwordController.text),
                       ),
                     ),
                     SizedBox(height: mediaQuery.size.height * 0.05),

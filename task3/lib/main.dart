@@ -8,6 +8,7 @@ import './screens/search_results.dart';
 import './screens/cart.dart';
 import './screens/favorites.dart';
 import './screens/profile.dart';
+import './screens/admin_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => Profile(),
         '/favorites': (context) => Favorites(),
         '/cart': (context) => Cart(),
+        '/adminscreen' : (context) => AdminScreen(),
       },
     );
   }
